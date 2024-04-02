@@ -15,7 +15,8 @@ conda create -n ll_env python=3.11
 - 安装依赖
 ```shell
 conda activate ll_env
-conda install django
+conda install conda-forge::django
+conda install conda-forge::django-bootstrap5
 ```
 - 在Django中创建项目并执行前期准备
 ```shell
@@ -24,10 +25,16 @@ django-admin startproject ll_project .
 ls .\ll_project
 # 初始化数据库
 python .\manage.py migrate
-# 创建应用程序
+```
+
+- 创建应用程序
+```shell
+# 新建learning_log应用
 python .\manage.py startapp learning_logs
-# 自定义应用存储数据授权(修改模型后需再次执行以下命令)
-python .\manage.py makemigrations learning_logs
+# 新建accounts应用
+python .\manage.pystartapp accounts
+# 新建应用存储数据授权(model.py变更需运行)
+python .\manage.py makemigrations {app_name}
 python .\manage.py migrate
 ```
 - 运行项目
