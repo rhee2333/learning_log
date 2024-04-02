@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 我的应用程序（务必将你自己创建的应用程序放在默认应用程序前面，这样能够覆盖默认应用程序的行为）
+    # 自建应用程序（务必将你自己创建的应用程序放在默认应用程序前面，这样能够覆盖默认应用程序的行为）
     'learning_logs',
+    'accounts',
 
     # Django 默认添加的应用程序
     'django.contrib.admin',
@@ -125,3 +126,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# 自定义设置
+LOGIN_REDIRECT_URL = 'learning_logs:index'
+LOGOUT_REDIRECT_URL = 'learning_logs:index'
