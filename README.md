@@ -20,12 +20,6 @@ conda install conda-forge::django
 conda install conda-forge::django-bootstrap5
 ```
 
-- 运行项目
-```shell
-python .\manage.py runserver
-```
----
-### ***以下内容为从零搭建系统，不感兴趣可忽略***
 - 在Django中创建项目并执行前期准备
 ```shell
 cd learning_log
@@ -34,6 +28,14 @@ ls .\ll_project
 # 初始化数据库
 python .\manage.py migrate
 ```
+
+- 运行项目
+```shell
+python .\manage.py runserver
+```
+---
+### ***以下内容为从零搭建系统，不感兴趣可忽略***
+
 - 创建应用程序
 ```shell
 # 新建learning_log应用
